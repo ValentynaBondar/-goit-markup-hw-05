@@ -24,8 +24,8 @@
                 <span class="logo-web">Web</span><span class="logo-heder">Studio</span></a>
             <ul class="site-nav list">
                 <li class="item-one"><a href="" class="link studio">Студия</a></li>
-                <li class="item-one"><a href="./portfolio.html" class="link">Портфолио</a></li>
-                <li class="item-one"><a href="" class="link">Контакты</a></li>
+                <li class="item-one"><a href="./portfolio.html" class="link portfolio">Портфолио</a></li>
+                <li class="item-one"><a href="" class="link we">Контакты</a></li>
             </ul>
         </nav>
 
@@ -52,8 +52,18 @@
         <section class="section">
             <div class="container">
             <h1 class="section-title">Эффективные решения для вашего бизнеса </h1>
-            <button type="button" class="button-primary">Заказать услугу</button>
+            
+            <button type="button" class="button-primary" data-modal-open>Заказать услугу</button>
+            
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal" >
+                <button type="button" class="close" data-modal-close> 
+                <svg class="primary-icon" width="11" height="11" >
+                <use href="./img/symbola-defs.svg#icon-Close" ></use>
+            </svg></button></div></div>
+            
         </div>
+
         </section>
 
         <!--почему вибирают нас-->
@@ -110,16 +120,31 @@
         <section class="photo">
             <div class="container">
             <h2 class="photo-title">Чем мы занимаемся</h2>
+            
             <ul class="img">
-                <li class="img-work">
-                    <img src="./img/img-min.png" alt=" веб разроботка " width="370" />
-                </li>
-                <li class="img-work">
-                    <img src="./img/img(1)-min.png" alt="мобильная разробка" width="370" />
-                </li>
-                <li class="img-work">
-                    <img src="./img/img(2)-min.png" alt="дизайн продукта" width="370" />
-                </li>
+        
+                <div class="product-thumb" >
+                    
+                     <li class="img-work">
+                        
+                    <img src="./img/img-min.png" alt=" веб разроботка "  width="370"  />
+                     </li>
+                    <p class="work-text-card">Десктопные приложения</p>
+               </div>
+
+               <div class="product-thumb development">
+                   <li class="img-work">
+                   <img src="./img/img(1)-min.png" alt="мобильная разробка"  />
+                    </li>
+                    <p class="work-text-card">Мобильные приложения</p>
+               </div>
+
+                <div class="product-thumb desingr">
+                    <li class="img-work" >
+                    <img src="./img/img(2)-min.png" alt="дизайн продукта"  />
+                     </li>
+                     <p class="work-text-card">Дизайнерские решения</p>
+               </div>
             </ul>
         </div>
         </section>
@@ -329,6 +354,7 @@
         </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
