@@ -506,7 +506,7 @@ h3{
   margin-top: -30px;
 }
 
-.img  .img-work{
+.img .img-work{
   flex-basis: calc((100% - 90px) / 3);
   margin-left: 30px;
   margin-top: 30px;
@@ -526,13 +526,18 @@ h3{
 
 
 .work-text-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 370px;
+    height: 70px;
+background-color: rgba(45,48,58,0.8);
 
   position: absolute;
   text-align: center;
-  width: 100%;
-  bottom: 0;
-  padding-top: 27px;
-  padding-bottom: 27px;
+ 
+ bottom: 0;
+ 
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
@@ -546,40 +551,6 @@ h3{
   
 }
 
-
-
-.product-thumb::before{
-  content: "";
-  position: absolute;
-
-  width: 370px;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-  bottom: 0;
-  right: 0;
-  display: block;
-  
-}
-.product-thumb.development::before{
-  content: "";
-  position: absolute;
-
-  width: 370px;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-  bottom: 0;
-  right: 0;
-}
-.product-thumb.desingr::before{
-  content: "";
-  position: absolute;
-
-  width: 370px;
-  height: 70px;
-  background-color: rgba(47, 48, 58, 0.8);
-  bottom: 0;
-  right: 0;
-}
 
 
 /*наши специалисты*/
@@ -623,20 +594,15 @@ h3{
 .photo-people:nth-child(4n){
         margin-right: 0;}
 
-.photo-people .text {
+.photo-people .colleagues {
 padding-top: 30px ;
 padding-bottom: 30px ;
 
 
 }      
 
-.team-people{
-    margin-bottom: 10px;
-    margin-top: 0;
-    
-   
-}
-.text .paragraph{
+
+.colleagues .paragraph{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 400;
@@ -647,7 +613,7 @@ letter-spacing: 0.03em;
 margin-bottom: 16px;
 
 }
-.text .people{
+.colleagues .people{
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 500;
@@ -655,6 +621,8 @@ font-size: 16px;
 line-height: 1.19;
 text-align: center;
 letter-spacing: 0.03em;
+margin-bottom: 10px;
+margin-top: 0;
 
 }
 .people-paragraf-item{
@@ -748,7 +716,7 @@ margin-bottom: 50px;
    
  
 
-transition-property: fill;
+transition-property: background-color;
 transition-duration: 250ms;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   
@@ -757,7 +725,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 .company-link:hover,
 .company-link:focus{ 
-fill:var(--accent-color);
+
 border-color:var(--accent-color);
 
 
@@ -767,7 +735,7 @@ border-color:var(--accent-color);
 .company-link:focus .company-icon{
    
  fill: var(--accent-color); 
-;
+
  
 
 }
@@ -775,9 +743,11 @@ border-color:var(--accent-color);
 
 
 .company-icon{
-    width: 170 px;
-    height: 92 px;
-    fill: #afb1b8;  
+    
+    fill: #afb1b8;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
    
 }
 
@@ -897,7 +867,7 @@ border-color:var(--accent-color);
   
   .footer-social-link:hover,
   .footer-social-link:focus {
-    fill: var(--color-color);
+    
     background-color: var(--accent-color);
   }
   
@@ -959,14 +929,10 @@ border-color:var(--accent-color);
 
     padding: 6px 22px 6px 22px;
     
-    transition: background-color 2500ms cubic-bezier(0.4, 0, 0.2, 1),
-   color 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+   box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
-    
-    
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
      }
  
@@ -1105,7 +1071,7 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 
 }
-.item:hover .paragraph-portfolio-window{
+.gallery-link:hover .paragraph-portfolio-window{
     transform: translateY(0);
     opacity: 1;
   
